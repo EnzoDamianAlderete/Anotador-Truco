@@ -9,7 +9,8 @@ export function EllosContainer(){
     const [ pointsEllos , setPointsEllos] = useState<number[]>([]);
 
     const Add =()=>{
-        setPointsEllos([...pointsEllos,1])
+        if(pointsEllos.length <= 4) setPointsEllos([...pointsEllos,1])
+        if(pointsEllos.length === 4) alert("Ganan Ellos")
     }
 
 

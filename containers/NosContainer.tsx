@@ -9,7 +9,12 @@ export function NosContainer(){
     const [ pointsNos , setPointsNos] = useState<number[]>([]);
 
     const Add =()=>{
-        setPointsNos([...pointsNos,1])
+        if(pointsNos.length <= 4){
+            setPointsNos([...pointsNos,1])
+        }
+        if(pointsNos.length === 4){
+            alert("Ganan Nos")
+        }
     }
 
     const Remove =()=>{
