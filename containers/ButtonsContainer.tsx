@@ -1,18 +1,7 @@
 'use client';
 
-import { ButtonAdd } from "@/components/ButtonAdd";
-import { ButtonRemove } from "@/components/ButtonRemonve";
-
-export function ButtonsContainer(){
-
-    const Add =()=>{
-        console.log("agregando");
-    }
-
-    const Remove =()=>{
-        console.log("remove");
-    }
-    
+export function ButtonsContainer({Add,Remove}){
+ 
     return(
         <div className="flex flex-col gap-2">
             <button 

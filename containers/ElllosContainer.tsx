@@ -1,19 +1,35 @@
+'use client'
+
 import { FosforoComponent } from "@/components/FosforoComponent";
 import { ButtonsContainer } from "./ButtonsContainer";
+import { useState } from "react";
 
 export function EllosContainer(){
 
-    const points =[1,2,3,4,5,6,7,8,9];
+    const [ pointsEllos , setPointsEllos] = useState<number[]>([]);
+
+    const Add =()=>{
+        setPointsEllos([...pointsEllos,1])
+    }
+
+
+    const Remove =()=>{
+        const points = [...pointsEllos];
+        points.pop();
+        setPointsEllos(points);
+    }
 
     return(
         <div className="aaf">
             <h2>Ellos</h2>
             <div className="flex flex-row-reverse">
-            <ButtonsContainer/>
+            <ButtonsContainer Add={Add} Remove={Remove}/>
             <div>
-                {points.map(point=>{
+                {pointsEllos.map((point,index)=>{
                     return(
-                        <FosforoComponent/>
+                        <span key={index}>
+                            <FosforoComponent/>
+                        </span>
                     )
                 })}
             </div>

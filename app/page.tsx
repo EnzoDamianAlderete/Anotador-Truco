@@ -1,7 +1,6 @@
 import { ButtonNewGame } from '@/components/ButtonNewGame'
 import { EllosContainer } from '@/containers/ElllosContainer'
 import { NosContainer } from '@/containers/NosContainer'
-import Image from 'next/image'
 
 export default function Home() {
   return (
