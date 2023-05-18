@@ -1,3 +1,4 @@
+import { AnotadorProvider } from '@/context/AppContext'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <AnotadorProvider>
       <body className={inter.className}>{children}</body>
+      </AnotadorProvider>
     </html>
   )
 }

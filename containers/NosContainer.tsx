@@ -1,12 +1,13 @@
 'use client'
 import { FosforoComponent } from "@/components/FosforoComponent";
 import { ButtonsContainer } from "./ButtonsContainer";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AnotadorContext } from "@/context/AppContext";
 
 
 export function NosContainer(){
 
-    const [ pointsNos , setPointsNos] = useState<number[]>([]);
+   const {pointsNos , setPointsNos} = useContext(AnotadorContext)
 
     const Add =()=>{
         if(pointsNos.length <= 4){

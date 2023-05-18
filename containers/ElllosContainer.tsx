@@ -2,11 +2,12 @@
 
 import { FosforoComponent } from "@/components/FosforoComponent";
 import { ButtonsContainer } from "./ButtonsContainer";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AnotadorContext } from "@/context/AppContext";
 
 export function EllosContainer(){
 
-    const [ pointsEllos , setPointsEllos] = useState<number[]>([]);
+    const {pointsEllos , setPointsEllos} = useContext(AnotadorContext);
 
     const Add =()=>{
         if(pointsEllos.length <= 4) setPointsEllos([...pointsEllos,1])
@@ -19,6 +20,7 @@ export function EllosContainer(){
         points.pop();
         setPointsEllos(points);
     }
+
 
     return(
         <div className="aaf">
