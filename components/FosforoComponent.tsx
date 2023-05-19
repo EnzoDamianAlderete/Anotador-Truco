@@ -1,6 +1,10 @@
+import './fosforo.css'
+
 export  function FosforoComponent(){
     return(
-        <h2>fosforo</h2>
+        <div className="rotate-120 fosforo">
+            <p>fosforo</p>
+        </div>
     )
 }
 

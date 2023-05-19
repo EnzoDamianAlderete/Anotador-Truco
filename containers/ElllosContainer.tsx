@@ -10,8 +10,8 @@ export function EllosContainer(){
     const {pointsEllos , setPointsEllos} = useContext(AnotadorContext);
 
     const Add =()=>{
-        if(pointsEllos.length <= 4) setPointsEllos([...pointsEllos,1])
-        if(pointsEllos.length === 4) alert("Ganan Ellos")
+        if(pointsEllos.length <= 9) setPointsEllos([...pointsEllos,1])
+        if(pointsEllos.length === 9) alert("Ganan Ellos")
     }
 
 
@@ -23,11 +23,11 @@ export function EllosContainer(){
 
 
     return(
-        <div className="aaf">
-            <h2>Ellos</h2>
-            <div className="flex flex-row-reverse">
+        <div>
+            <h2 className="p-2">Ellos :</h2>
+            <div className="flex flex-row-reverse border-l-2 ">
             <ButtonsContainer Add={Add} Remove={Remove}/>
-            <div>
+            <div className="pt-7">
                 {pointsEllos.map((point,index)=>{
                     return(
                         <span key={index}>

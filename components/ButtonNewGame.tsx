@@ -6,10 +6,10 @@ import { useContext } from "react"
 export function ButtonNewGame(){
 
     const {RestartGame} = useContext(AnotadorContext);
-    
+
     return(
         <button 
         onClick={()=>RestartGame()}
-        className="bg-sky-500 hover:bg-sky-700 w-52 p-2 rounded-full self-center my-6">Nueva Partida</button>
+        className="font-semibold bg-yellow-950 w-52 p-2 text-lg rounded-md self-center my-6 border-2 border-yellow-600">Nueva Partida</button>
     )
 }

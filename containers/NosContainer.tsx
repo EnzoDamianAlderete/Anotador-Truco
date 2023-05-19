@@ -10,12 +10,8 @@ export function NosContainer(){
    const {pointsNos , setPointsNos} = useContext(AnotadorContext)
 
     const Add =()=>{
-        if(pointsNos.length <= 4){
-            setPointsNos([...pointsNos,1])
-        }
-        if(pointsNos.length === 4){
-            alert("Ganan Nos")
-        }
+        if(pointsNos.length <= 9)setPointsNos([...pointsNos,1])
+        if(pointsNos.length === 9)alert("Ganan Nos")
     }
 
     const Remove =()=>{
@@ -27,10 +23,10 @@ export function NosContainer(){
 
     return(
         <div className="" >
-            <h2>Nos</h2>
+            <h2 className="p-2">Nos :</h2>
             <div className="flex justify-around align-middle">
                 <ButtonsContainer Add={Add} Remove={Remove}/>
-                <div>
+                <div className="pt-7">
                 {pointsNos.map((point, index) =>{
                     return(
                         <span key={index}>

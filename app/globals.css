@@ -17,9 +17,10 @@
 }
 
 body {
- background-image: url("../src/img/bg-anotador.jpg");
+ /*background-image: url("../src/img/bg-anotador.jpg");
  background-repeat: no-repeat;
  background-position: center;
- background-size: cover;
+ background-size: cover;*/
+ background-color: rgb(104, 68, 34);
  min-height: 100vh;
 }

@@ -6,12 +6,12 @@ export function ButtonsContainer({Add,Remove}){
         <div className="flex flex-col gap-2">
             <button 
             onClick={()=>Add()}
-            className="p-2 rounded-full bg-blue-500"
+            className="p-1 rounded-full border-2 m-2"
             >+
             </button>
             <button 
             onClick={()=>Remove()}
-            className="p-2 rounded-full bg-red-500">
+            className="p-1 rounded-full border-2 m-2">
             -
             </button>
         </div>
