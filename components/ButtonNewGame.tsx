@@ -9,7 +9,7 @@ export function ButtonNewGame(){
 
     return(
         <button 
-        onClick={()=>RestartGame()}
+        onClick={RestartGame}
         className="font-semibold bg-yellow-950 w-52 p-2 text-lg rounded-md self-center my-6 border-2 border-yellow-600">Nueva Partida</button>
     )
 }

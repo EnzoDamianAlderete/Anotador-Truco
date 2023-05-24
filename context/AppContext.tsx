@@ -7,7 +7,7 @@ interface MyContextProps{
   setPointsEllos: React.Dispatch<React.SetStateAction<number[]>>;
   pointsNos: number[];
   setPointsNos: React.Dispatch<React.SetStateAction<number[]>>;
-  restartGame: () => void;
+  RestartGame: () => void;
   children : ReactNode;
 }
 
@@ -18,13 +18,13 @@ export const AnotadorProvider = ({ children }:MyContextProps) => {
   const [ pointsEllos , setPointsEllos] = useState<number[]>([]);
   const [ pointsNos , setPointsNos] = useState<number[]>([]);
 
-  const restartGame =():void=>{
+  const RestartGame =():void=>{
     setPointsEllos([]);
     setPointsNos([]);
   }
 
   return (
-    <AnotadorContext.Provider value={{pointsEllos,setPointsEllos,pointsNos,setPointsNos,restartGame,children }}>
+    <AnotadorContext.Provider value={{pointsEllos,setPointsEllos,pointsNos,setPointsNos,RestartGame,children }}>
       {children}
     </AnotadorContext.Provider>
   );
