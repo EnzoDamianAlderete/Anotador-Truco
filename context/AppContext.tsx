@@ -1,21 +1,30 @@
 "use client";
 
-import React, { createContext, useState } from 'react';
+import React, { ReactNode, createContext, useState } from 'react';
+
+interface MyContextProps{
+  pointsEllos: number[];
+  setPointsEllos: React.Dispatch<React.SetStateAction<number[]>>;
+  pointsNos: number[];
+  setPointsNos: React.Dispatch<React.SetStateAction<number[]>>;
+  restartGame: () => void;
+  children : ReactNode;
+}
 
 
-export const AnotadorContext = createContext();
+export const AnotadorContext = createContext<MyContextProps>({} as MyContextProps);
 
-export const AnotadorProvider = ({ children }) => {
+export const AnotadorProvider = ({ children }:MyContextProps) => {
   const [ pointsEllos , setPointsEllos] = useState<number[]>([]);
   const [ pointsNos , setPointsNos] = useState<number[]>([]);
 
-  const RestartGame =()=>{
+  const restartGame =():void=>{
     setPointsEllos([]);
     setPointsNos([]);
   }
 
   return (
-    <AnotadorContext.Provider value={{pointsEllos,setPointsEllos,pointsNos,setPointsNos,RestartGame }}>
+    <AnotadorContext.Provider value={{pointsEllos,setPointsEllos,pointsNos,setPointsNos,restartGame,children }}>
       {children}
     </AnotadorContext.Provider>
   );
