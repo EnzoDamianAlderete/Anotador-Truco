@@ -22,7 +22,7 @@ export function NosContainer(){
     return(
         <div className="" >
             <h2 className="p-2">Nos :</h2>
-            <div className="flex justify-around align-middle">
+            <div className="flex justify-around align-middle container mx-auto border-r-1">
                 <ButtonsContainer Add={Add} Remove={Remove}/>
                 <div className="pt-7">
                 <FosforoComponentNos/>

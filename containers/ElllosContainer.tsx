@@ -23,7 +23,7 @@ export function EllosContainer(){
     return(
         <div>
             <h2 className="p-2">Ellos :</h2>
-            <div className="flex flex-row-reverse border-l-2 ">
+            <div className="flex flex-row-reverse justify-around align-middle container mx-auto border-l-2">
             <ButtonsContainer Add={Add} Remove={Remove}/>
             <div className="pt-7">
             <FosforoComponentEllos/>

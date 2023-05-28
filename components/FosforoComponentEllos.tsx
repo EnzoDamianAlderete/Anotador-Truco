@@ -4,15 +4,15 @@ import { AnotadorContext } from '@/context/AppContext';
 
 export  function FosforoComponentEllos(){
 
-    const {pointsEllos , pointsNos} = useContext(AnotadorContext);
+    const {pointsEllos} = useContext(AnotadorContext);
 
 
     return(
         <div>
             <Image
             src={`/fosforos/fosforos-${pointsEllos}.png`}
-            width={120}
-            height={120}
+            width={100}
+            height={100}
             alt="fosforo"
             />
         </div>

@@ -17,10 +17,9 @@
 }
 
 body {
- /*background-image: url("../src/img/bg-anotador.jpg");
+ background-image: url("../src/img/bg-app.jpg");
  background-repeat: no-repeat;
  background-position: center;
- background-size: cover;*/
- background-color: rgb(104, 68, 34);
+ background-size: cover;
  min-height: 100vh;
 }
