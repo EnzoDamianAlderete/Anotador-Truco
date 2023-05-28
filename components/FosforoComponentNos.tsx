@@ -9,12 +9,13 @@ export  function FosforoComponentNos(){
 
     return(
         <div>
-            <Image
+            {pointsNos ? <Image
             src={`/fosforos/fosforos-${pointsNos}.png`}
             width={100}
             height={100}
             alt="fosforo"
-            />
+            />: ""}
+            
         </div>
     )
 }

@@ -20,7 +20,7 @@ export function NosContainer(){
     
 
     return(
-        <div className="" >
+        <div>
             <h2 className="p-2">Nos :</h2>
             <div className="flex justify-around align-middle container mx-auto border-r-1">
                 <ButtonsContainer Add={Add} Remove={Remove}/>
