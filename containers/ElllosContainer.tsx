@@ -10,8 +10,8 @@ export function EllosContainer(){
     const {pointsEllos , setPointsEllos} = useContext(AnotadorContext);
 
     const Add =()=>{
-        if(pointsEllos <= 14) setPointsEllos(pointsEllos + 1)
-        if(pointsEllos === 14) alert("Ganan Ellos")
+        if(pointsEllos <= 29) setPointsEllos(pointsEllos + 1)
+        if(pointsEllos === 29) alert("Ganan Ellos")
     }
 
 

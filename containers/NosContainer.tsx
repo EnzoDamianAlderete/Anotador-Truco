@@ -10,8 +10,8 @@ export function NosContainer(){
    const {pointsNos , setPointsNos} = useContext(AnotadorContext)
 
     const Add =()=>{
-        if(pointsNos <= 14)setPointsNos( pointsNos + 1)
-        if(pointsNos === 14)alert("Ganan Nos")
+        if(pointsNos <= 29)setPointsNos( pointsNos + 1)
+        if(pointsNos === 29)alert("Ganan Nos")
     }
 
     const Remove =()=>{
