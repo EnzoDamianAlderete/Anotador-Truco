@@ -20,15 +20,16 @@ export function NosContainer(){
     
 
     return(
-        <div>
-            <h2 className="p-2">Nos :</h2>
-            <div className="flex justify-around align-middle container mx-auto border-r-1">
-                <ButtonsContainer Add={Add} Remove={Remove}/>
-                <div className="pt-7">
+        <div className="flex flex-row-reverse container mx-auto">
+            <div >
+                <h2 className="p-2 drop-shadow-md border-b-2 ">Nos :</h2>
+                <div className="md:p-20 p-12 w-36 h-96 md:w-60 ">
                 <FosforoComponentNos/>
                 </div>
             </div>
-            
+            <div className="self-center">
+            <ButtonsContainer Add={Add} Remove={Remove}/>
+            </div>
         </div>
     )
 }

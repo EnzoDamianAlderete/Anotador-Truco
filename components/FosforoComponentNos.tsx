@@ -8,13 +8,13 @@ export  function FosforoComponentNos(){
 
 
     return(
-        <div>
+        <div className='drop-shadow-md'>
             {pointsNos ? <Image
             src={`/fosforos/fosforos-${pointsNos}.png`}
-            width={100}
-            height={100}
+            width={60}
+            height={60}
             alt="fosforo"
-            />: ""}
+            />: <div></div> }
             
         </div>
     )
