@@ -15,6 +15,9 @@ module.exports = {
       },
       rotate: {
         '120': '120deg',
+      },
+      spacing: {
+        '128': '27.5rem',
       }
     },
   },
