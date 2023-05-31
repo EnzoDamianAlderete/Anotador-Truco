@@ -23,7 +23,7 @@ export function NosContainer(){
         <div className="flex flex-row-reverse container mx-auto">
             <div >
                 <h2 className="p-2 drop-shadow-md border-b-2 ">Nos :</h2>
-                <div className="md:p-20 p-9 w-36 h-128 md:w-60 ">
+                <div className="md:p-10 p-9 w-36 h-128 md:w-60">
                 <FosforoComponentNos/>
                 </div>
             </div>

@@ -17,7 +17,7 @@ export  function FosforoComponentEllos(){
 
     return(
         <div className='drop-shadow-md'>
-            {pointsEllos ? <div>{esMayorEllos ? <div>
+            {pointsEllos ? <div className='flex justify-center'>{esMayorEllos ? <div>
             <Image
             src={`/fosforos/fosforos-15.png`}
             width={60}

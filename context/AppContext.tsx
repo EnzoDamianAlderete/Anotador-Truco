@@ -3,6 +3,10 @@
 import React, { ReactNode, createContext, useState } from 'react';
 
 interface MyContextProps{
+  isOpen:boolean; 
+  setIsOpen:React.Dispatch<React.SetStateAction<boolean>>;
+  openModal: () => void;
+  closeModal:() => void;
   pointsEllos: number;
   esMayorEllos:boolean;
   setEsMayorEllos:React.Dispatch<React.SetStateAction<boolean>>;
@@ -23,16 +27,26 @@ export const AnotadorProvider = ({ children }:MyContextProps) => {
   const [ pointsNos , setPointsNos] = useState<number>(0);
   const [esMayorNos , setEsMayorNos] = useState<boolean>(false);
   const [esMayorEllos , setEsMayorEllos] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   const RestartGame =():void=>{
     setPointsEllos(0);
     setPointsNos(0);
     setEsMayorNos(false);
     setEsMayorEllos(false);
+    closeModal();
   }
 
   return (
-    <AnotadorContext.Provider value={{pointsEllos,setPointsEllos,pointsNos,setPointsNos,RestartGame,children,esMayorNos,setEsMayorNos,esMayorEllos,setEsMayorEllos }}>
+    <AnotadorContext.Provider value={{pointsEllos,setPointsEllos,pointsNos,setPointsNos,RestartGame,children,esMayorNos,setEsMayorNos,esMayorEllos,setEsMayorEllos,isOpen, setIsOpen,openModal,closeModal }}>
       {children}
     </AnotadorContext.Provider>
   );

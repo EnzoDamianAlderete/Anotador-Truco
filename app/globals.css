@@ -10,3 +10,11 @@ body {
  background-size: cover;
  min-height: 100vh;
 }
+
+.bg-truco{
+    background-image: url("../src/img/bg-title.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 85px;
+}

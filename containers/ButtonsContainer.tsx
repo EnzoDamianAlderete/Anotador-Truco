@@ -10,15 +10,15 @@ interface ButtonsContainerProps {
 export function ButtonsContainer({Add,Remove}:ButtonsContainerProps){
  
     return(
-        <div className="flex flex-col gap-1 ">
+        <div className="flex flex-col gap-8 ">
             <button 
             onClick={Add}
-            className="p-1 rounded-full border-2"
+            className="p-3 rounded-full border-2"
             >+
             </button>
             <button 
             onClick={Remove}
-            className="p-1 rounded-full border-2">
+            className="p-3 rounded-full border-2">
             -
             </button>
         </div>
