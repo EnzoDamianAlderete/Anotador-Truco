@@ -7,11 +7,14 @@ import { AnotadorContext } from "@/context/AppContext";
 
 export function NosContainer(){
 
-   const {pointsNos , setPointsNos} = useContext(AnotadorContext)
+   const {pointsNos , setPointsNos,setWin,setWinner} = useContext(AnotadorContext)
 
     const Add =()=>{
         if(pointsNos <= 29)setPointsNos( pointsNos + 1)
-        if(pointsNos === 29)alert("Ganan Nos")
+        if(pointsNos === 29){
+            setWinner(true)
+            setWin("Nos")
+        } 
     }
 
     const Remove =()=>{

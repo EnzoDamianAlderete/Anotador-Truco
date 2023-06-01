@@ -7,11 +7,15 @@ import { AnotadorContext } from "@/context/AppContext";
 
 export function EllosContainer(){
 
-    const {pointsEllos , setPointsEllos} = useContext(AnotadorContext);
+    const {pointsEllos , setPointsEllos, setWinner,setWin} = useContext(AnotadorContext);
+    
 
     const Add =()=>{
         if(pointsEllos <= 29) setPointsEllos(pointsEllos + 1)
-        if(pointsEllos === 29) alert("Ganan Ellos")
+        if(pointsEllos === 29){
+            setWinner(true)
+            setWin("Ellos")
+        } 
     }
 
 

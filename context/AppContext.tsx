@@ -3,6 +3,10 @@
 import React, { ReactNode, createContext, useState } from 'react';
 
 interface MyContextProps{
+  Win :string;
+  setWin:React.Dispatch<React.SetStateAction<string>>;
+  winner:boolean;
+  setWinner:React.Dispatch<React.SetStateAction<boolean>>;
   isOpen:boolean; 
   setIsOpen:React.Dispatch<React.SetStateAction<boolean>>;
   openModal: () => void;
@@ -23,6 +27,8 @@ interface MyContextProps{
 export const AnotadorContext = createContext<MyContextProps>({} as MyContextProps);
 
 export const AnotadorProvider = ({ children }:MyContextProps) => {
+  const [Win, setWin] = useState<string>("");
+  const [winner , setWinner] = useState<boolean>(false);
   const [ pointsEllos , setPointsEllos] = useState<number>(0);
   const [ pointsNos , setPointsNos] = useState<number>(0);
   const [esMayorNos , setEsMayorNos] = useState<boolean>(false);
@@ -42,11 +48,12 @@ export const AnotadorProvider = ({ children }:MyContextProps) => {
     setPointsNos(0);
     setEsMayorNos(false);
     setEsMayorEllos(false);
+    setWinner(false);
     closeModal();
   }
 
   return (
-    <AnotadorContext.Provider value={{pointsEllos,setPointsEllos,pointsNos,setPointsNos,RestartGame,children,esMayorNos,setEsMayorNos,esMayorEllos,setEsMayorEllos,isOpen, setIsOpen,openModal,closeModal }}>
+    <AnotadorContext.Provider value={{pointsEllos,setPointsEllos,pointsNos,setPointsNos,RestartGame,children,esMayorNos,setEsMayorNos,esMayorEllos,setEsMayorEllos,isOpen, setIsOpen,openModal,closeModal,winner , setWinner,Win, setWin }}>
       {children}
     </AnotadorContext.Provider>
   );
