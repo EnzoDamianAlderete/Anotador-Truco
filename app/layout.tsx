@@ -10,9 +10,13 @@ export const metadata = {
   description: 'Development by: Enzo Alderete',
 }
 
+interface RootLayoutProps extends MyContextProps {
+  children: React.ReactNode
+}
+
 export function RootLayout({
   children,
-  win,
+  Win,
   setWin,
   winner,
   setWinner,
@@ -29,31 +33,11 @@ export function RootLayout({
   setIsOpen,
   openModal,
   closeModal,
-}: {
-  children: React.ReactNode,
-  // Agrega todas las variables requeridas como propiedades aquí
-  win: string,
-  setWin: React.Dispatch<React.SetStateAction<string>>,
-  winner: boolean,
-  setWinner: React.Dispatch<React.SetStateAction<boolean>>,
-  pointsEllos: number,
-  setPointsEllos: React.Dispatch<React.SetStateAction<number>>,
-  pointsNos: number,
-  setPointsNos: React.Dispatch<React.SetStateAction<number>>,
-  RestartGame: () => void,
-  esMayorNos: boolean,
-  setEsMayorNos: React.Dispatch<React.SetStateAction<boolean>>,
-  esMayorEllos: boolean,
-  setEsMayorEllos: React.Dispatch<React.SetStateAction<boolean>>,
-  isOpen: boolean,
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>,
-  openModal: () => void,
-  closeModal: () => void,
-}) {
+}: RootLayoutProps) {
   return (
     <html lang="en">
       <AnotadorProvider
-        Win={win}
+        Win={Win}
         setWin={setWin}
         winner={winner}
         setWinner={setWinner}
