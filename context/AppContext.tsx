@@ -2,7 +2,7 @@
 
 import React, { ReactNode, createContext, useState } from 'react';
 
-interface MyContextProps{
+export interface MyContextProps{
   Win :string;
   setWin:React.Dispatch<React.SetStateAction<string>>;
   winner:boolean;
