@@ -10,7 +10,7 @@ export const metadata = {
   description: 'Development by: Enzo Alderete',
 }
 
-export default function RootLayout({
+export function RootLayout({
   children,
   win,
   setWin,
@@ -76,3 +76,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+export default RootLayout;
