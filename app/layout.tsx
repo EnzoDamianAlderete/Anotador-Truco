@@ -16,9 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <AnotadorProvider>
-      <body className={corben.className}>{children}</body>
-      </AnotadorProvider>
+      
+      <body className={corben.className}>
+        <AnotadorProvider>
+          {children}
+        </AnotadorProvider>
+        </body>
+      
     </html>
   )
 }
