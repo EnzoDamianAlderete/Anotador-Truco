@@ -11,7 +11,7 @@ export function EllosContainer(){
     const {pointsEllos , setPointsEllos, setWinner,setWin} = useContext(Context) as AnotadorContextType;
     
 
-    const Add =()=>{
+    const Add =():void=>{
         if(pointsEllos <= 29) setPointsEllos(pointsEllos + 1)
         if(pointsEllos === 29){
             setWinner(true)
@@ -20,8 +20,8 @@ export function EllosContainer(){
     }
 
 
-    const Remove =()=>{
-        setPointsEllos(pointsEllos - 1)
+    const Remove =():void=>{
+        if(pointsEllos > 0 ) setPointsEllos(pointsEllos - 1)
     }
 
 
