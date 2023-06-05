@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import { useContext, useEffect, useState } from 'react';
-import { AnotadorContext } from '@/context/AppContext';
+import Context from '@/context/AppContext';
+import { AnotadorContextType } from '@/context/types';
 
 export  function FosforoComponentEllos(){
 
-    const {pointsEllos,esMayorEllos , setEsMayorEllos} = useContext(AnotadorContext);
+    const {pointsEllos,esMayorEllos , setEsMayorEllos} = useContext(Context) as AnotadorContextType;
     
     useEffect(()=>{
         if(pointsEllos > 15){

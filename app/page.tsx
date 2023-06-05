@@ -3,13 +3,15 @@ import { ButtonNewGame } from '@/components/ButtonNewGame'
 import Modal from '@/components/Modal';
 import { EllosContainer } from '@/containers/ElllosContainer'
 import { NosContainer } from '@/containers/NosContainer'
-import { AnotadorContext } from '@/context/AppContext';
 import { useContext } from 'react';
 import Image from 'next/image';
 import AlertWin from '@/components/AlertWin';
+import Context from '@/context/AppContext';
+import { AnotadorContextType } from '@/context/types';
 
 export default function Home() {
-  const {Win,winner,isOpen , closeModal,RestartGame} = useContext(AnotadorContext);
+  const {Win,winner,isOpen , closeModal,RestartGame} = useContext(Context) as AnotadorContextType;
+  
   
   return (
     <main className='text-center text-white text-2xl relative'>

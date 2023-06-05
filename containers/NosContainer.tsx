@@ -2,12 +2,13 @@
 import { FosforoComponentNos } from "@/components/FosforoComponentNos";
 import { ButtonsContainer } from "./ButtonsContainer";
 import { useContext, useState } from "react";
-import { AnotadorContext } from "@/context/AppContext";
+import   Context  from "@/context/AppContext";
+import { AnotadorContextType } from "@/context/types";
 
 
 export function NosContainer(){
 
-   const {pointsNos , setPointsNos,setWin,setWinner} = useContext(AnotadorContext)
+   const {pointsNos,setPointsNos,setWin,setWinner} = useContext(Context) as AnotadorContextType;
 
     const Add =()=>{
         if(pointsNos <= 29)setPointsNos( pointsNos + 1)

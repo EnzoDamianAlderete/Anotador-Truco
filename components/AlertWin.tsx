@@ -1,4 +1,5 @@
-import { AnotadorContext } from '@/context/AppContext';
+import Context from '@/context/AppContext';
+import { AnotadorContextType } from '@/context/types';
 import Image from 'next/image';
 import React, { useContext } from 'react';
 
@@ -8,7 +9,7 @@ interface AlertWinProps {
 
 const AlertWin: React.FC<AlertWinProps>  = ({winner}) => {
   
-  const {RestartGame}= useContext(AnotadorContext)
+  const {RestartGame}= useContext(Context) as AnotadorContextType;
   return (
     <div className="flex flex-col bg-black bg-opacity-60 w-full h-screen absolute top-0">
       <div className="bg-amber-950 w-72 h-92 p-8 mt-36 rounded-md self-center">

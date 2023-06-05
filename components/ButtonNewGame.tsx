@@ -1,11 +1,12 @@
 'use client'
-import { AnotadorContext } from "@/context/AppContext"
+import Context from '@/context/AppContext';
+import { AnotadorContextType } from '@/context/types';
 import { useContext } from "react"
 
 
 export function ButtonNewGame(){
 
-    const {openModal} = useContext(AnotadorContext);
+    const {openModal} = useContext(Context) as AnotadorContextType;
 
     return(
         <button 

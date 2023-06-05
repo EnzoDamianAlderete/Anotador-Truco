@@ -3,11 +3,12 @@
 import { FosforoComponentEllos } from "@/components/FosforoComponentEllos";
 import { ButtonsContainer } from "./ButtonsContainer";
 import { useContext, useState } from "react";
-import { AnotadorContext } from "@/context/AppContext";
+import   Context  from "@/context/AppContext";
+import { AnotadorContextType } from "@/context/types";
 
 export function EllosContainer(){
 
-    const {pointsEllos , setPointsEllos, setWinner,setWin} = useContext(AnotadorContext);
+    const {pointsEllos , setPointsEllos, setWinner,setWin} = useContext(Context) as AnotadorContextType;
     
 
     const Add =()=>{
